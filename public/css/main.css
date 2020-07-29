@@ -54,7 +54,11 @@ ul {
   animation: move 0.6s ease-out infinite alternate;
 }
 /* nav bar */
-
+#navbar {
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+}
 .main-nav {
   z-index: 1;
   display: flex;
@@ -85,6 +89,7 @@ ul {
 .main-nav ul li {
   padding: 0 10px;
   margin: 0 5px;
+  letter-spacing: 1px;
 }
 .main-nav ul.main-menu {
   flex: 1;
@@ -172,6 +177,7 @@ ul {
   margin: 3rem;
   border-radius: 20px;
   overflow: hidden;
+  transition: all 0.3s ease-out;
 }
 
 .cards i {
@@ -190,6 +196,10 @@ ul {
 
   background: #f9f9f9;
   color: dimgray;
+}
+.cards .card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 /* review */
@@ -399,7 +409,7 @@ button:focus {
 
 /* media queries */
 /* tablet width */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   /* nav bar */
   .main-nav .logo {
     width: 30px;
@@ -485,8 +495,9 @@ button:focus {
   }
 }
 
+
 /* mobile width */
-@media (max-width: 375px) {
+@media (min-width: 360px) and (max-width: 480px) {
   /* menu btn */
   .hamburger .line {
     background: #fff;
@@ -547,18 +558,18 @@ button:focus {
 
   /* nav */
 
-  
   .right-menu {
     padding: 0;
     margin: 0;
   }
 
   .main-nav .logo {
+    margin: 0;
     width: 30px;
     top: 10px;
-    right: 10px;
+    right: 30px;
     position: absolute;
-    float: left;
+    
   }
   .main-nav {
     backdrop-filter: none;
@@ -587,11 +598,9 @@ button:focus {
   .main-nav ul.main-menu.is-active {
     transform: translateX(-32px);
   }
-  .main-nav .right-menu{
+  .main-nav .right-menu {
     margin: 0 auto;
     padding: 0;
-    
-
   }
   /* showcase */
   .showcase {
@@ -600,9 +609,25 @@ button:focus {
     justify-content: center;
     background: linear-gradient(360deg, #11998e, #38ef7d);
   }
+  .grid-container{
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 0;
+  }
+  .grid-container > div:nth-child(2){
+    grid-row: 1;
+  }
   .left .lap {
     width: 300px;
     margin: 0 auto;
+  }
+  .grid-container.left{
+    margin-top: 0;
+  }
+  .left{
+    margin-top: 2rem;
   }
   .right {
     width: 300px;
@@ -616,9 +641,11 @@ button:focus {
     font-size: 0.8rem;
     width: 300px;
   }
-  .right,
-  .left {
-    margin-top: 1rem;
+  
+  .fa-chevron-down{
+    margin: 0 auto;
+    position: relative;
+    bottom: 50%;
   }
 
   /* logos */
@@ -646,9 +673,12 @@ button:focus {
   }
   /*cards  */
   .cards {
+    margin: 0;
     grid-template-columns: 1fr;
+    grid-gap: 0;
   }
   .cards .card {
+    
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-out;
   }
@@ -656,13 +686,14 @@ button:focus {
     text-align: center;
     padding: 15px;
   }
-  .cards .card:hover {
-    transform: scale(1.05);
-  }
 
   /* review */
   section h2 {
     font-size: 19px;
+  }
+  .review{
+    grid-template-columns: 1fr;
+
   }
   .review .cards-2 {
     grid-template-columns: 1fr;
@@ -675,6 +706,9 @@ button:focus {
   .review img {
     width: 70px;
     margin: 0;
+  }
+  .review > div:last-child{
+    left: 0;
   }
 
   /* get started */
