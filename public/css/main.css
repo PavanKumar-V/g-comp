@@ -618,6 +618,7 @@ button:focus {
   }
   .grid-container > div:nth-child(2){
     grid-row: 1;
+    margin-top: 5rem;
   }
   .left .lap {
     width: 300px;
