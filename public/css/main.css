@@ -738,8 +738,8 @@ button:focus {
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  /* showcase */
+/* @media only screen and (max-width: 1024px) {
+  showcase
   .showcase {
     height: 60vh;
   }
@@ -762,21 +762,21 @@ button:focus {
     bottom: 70%;
   }
 
-  /* logos */
+  logos
   .logos {
     margin: 1rem;
   }
 
-  /* cards */
+  cards
   .cards {
     margin: 0;
     grid-gap: 0;
   }
   .cards .card{
-    margin: 2rem;
+    margin: 1rem;
   }
 
-  /* review */
+  review
 
   .review {
     padding: 20px;
@@ -796,4 +796,4 @@ button:focus {
   position: relative;
   left: 55%;
 }
-}
+} */
